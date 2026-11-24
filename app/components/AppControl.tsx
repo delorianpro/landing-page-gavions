@@ -13,7 +13,7 @@ const features = [
     number: "02",
     title: "Visualização ao vivo",
     description: "Acompanhe as câmeras em tempo real e com alta qualidade.",
-    image: "/assets/celular-vizualizacao-ao-vivowebp",
+    image: "/assets/celular-visualizacao-ao-vivo.webp",
     alt: "Aplicativo Gavions mostrando a câmera de uma entrada ao vivo.",
   },
   {

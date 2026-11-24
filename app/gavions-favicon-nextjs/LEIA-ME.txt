@@ -1,0 +1,11 @@
+Gavions — favicons para Next.js App Router
+
+Copie estes três arquivos para src/app/ (ou app/ se não existir src):
+- favicon.ico: 16, 32, 48, 64, 128 e 256 px embutidos
+- icon.png: 192×192 px
+- apple-icon.png: 180×180 px
+
+O arquivo icon-512.png é opcional e pode ser usado em um manifesto PWA (em public/).
+
+Todos os ícones mantêm a logo original sem distorção e com fundo transparente.
+O Next.js identifica os três nomes acima automaticamente, sem configuração manual.

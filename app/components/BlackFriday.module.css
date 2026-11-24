@@ -1,0 +1,268 @@
+.section {
+  padding-block: clamp(3.5rem, 6vw, 5.5rem);
+  background:
+    radial-gradient(ellipse at 50% 100%, rgb(16 70 100 / 14%), transparent 65%),
+    #030a14;
+  color: #ffffff;
+  font-family: var(--font-manrope), Arial, Helvetica, sans-serif;
+}
+
+.container {
+  box-sizing: border-box;
+  width: min(100%, 84rem);
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 5.5vw, 4.5rem);
+}
+
+.banner {
+  position: relative;
+  isolation: isolate;
+  border: 1px solid color-mix(in srgb, var(--gavions-green) 65%, transparent);
+  border-radius: 1.5rem;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgb(101 204 52 / 6%), transparent 65%),
+    linear-gradient(120deg, #0a121f, #06121c 50%, #0a121f);
+  box-shadow:
+    0 0 20px rgb(101 204 52 / 6%),
+    inset 0 0 24px rgb(101 204 52 / 3%),
+    0 16px 48px rgb(0 0 0 / 18%);
+}
+
+.banner::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  background-image:
+    linear-gradient(rgb(113 170 206 / 5%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(113 170 206 / 5%) 1px, transparent 1px);
+  background-size: 2rem 2rem;
+  mask-image: linear-gradient(90deg, #000, transparent 38%, transparent 62%, #000);
+  content: "";
+  pointer-events: none;
+}
+
+.banner::after {
+  position: absolute;
+  right: 25%;
+  bottom: -1px;
+  left: 25%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gavions-green), transparent);
+  box-shadow: 0 2px 12px rgb(101 204 52 / 20%);
+  content: "";
+  pointer-events: none;
+}
+
+.circuitLeft,
+.circuitRight {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  width: min(26%, 17.5rem);
+  height: auto;
+  color: var(--gavions-green);
+  opacity: 0.17;
+  pointer-events: none;
+}
+
+.circuitLeft {
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.circuitRight {
+  right: 0;
+  transform: translateY(-50%) scaleX(-1);
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin: 0;
+  padding: 0.5rem 1.75rem;
+  transform: translate(-50%, -50%);
+  border: 1px solid var(--gavions-green);
+  border-radius: 999px;
+  background: #0a121f;
+  color: var(--gavions-green);
+  box-shadow: 0 0 12px rgb(101 204 52 / 15%);
+  font-family: var(--font-oxanium), Arial, Helvetica, sans-serif;
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(2.5rem, 4vw, 3rem) 1.5rem 2rem;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #c0cedb;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.24em;
+  text-wrap: balance;
+}
+
+.offer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 2.5vw, 2rem);
+  margin: 0.75rem 0 1.25rem;
+  color: var(--gavions-green);
+  font-family: var(--font-oxanium), Arial, Helvetica, sans-serif;
+  line-height: 1;
+}
+
+.percentage {
+  font-size: clamp(4.5rem, 8vw, 6.5rem);
+  font-weight: 800;
+  letter-spacing: -0.06em;
+  text-shadow: 0 0 24px rgb(101 204 52 / 16%);
+}
+
+.discount {
+  max-width: 8ch;
+  font-size: clamp(1.375rem, 2.6vw, 2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+.whatsapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  box-sizing: border-box;
+  width: min(100%, 32rem);
+  min-height: 3.5rem;
+  padding: 0.875rem 1.5rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: var(--gavions-green);
+  color: #002908;
+  box-shadow: 0 4px 20px rgb(101 204 52 / 12%);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: background-color 180ms ease, box-shadow 180ms ease;
+}
+
+.whatsapp svg {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+@media (hover: hover) {
+  .whatsapp:hover {
+    background: color-mix(in srgb, var(--gavions-green) 88%, white);
+    box-shadow: 0 0 24px rgb(101 204 52 / 26%);
+  }
+}
+
+.whatsapp:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 5px;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (max-width: 599px) {
+  .banner {
+    border-radius: 1.25rem;
+  }
+
+  .content {
+    padding: 2.5rem 1.25rem 1.5rem;
+  }
+
+  .eyebrow {
+    letter-spacing: 0.14em;
+  }
+
+  .offer {
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-block: 1.25rem 1.75rem;
+  }
+
+  .percentage {
+    font-size: clamp(4.5rem, 20vw, 6rem);
+  }
+
+  .discount {
+    max-width: none;
+    font-size: 1.375rem;
+    text-align: center;
+  }
+
+  .circuitLeft,
+  .circuitRight {
+    width: 35%;
+    opacity: 0.1;
+  }
+
+  .whatsapp {
+    padding-inline: 1rem;
+    border-radius: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp {
+    transition: none;
+  }
+}
+@media (max-width: 450px){
+  .whatsapp{
+    font-size: 0.8rem;
+    gap: 0.5rem;
+  }
+  .whatsapp svg{
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+
+@media (width < 375px) {
+  .whatsapp {
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .whatsapp > span:not(.srOnly) {
+    flex: 0 1 auto;
+    min-width: 0;
+    max-width: 20ch;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .whatsapp svg {
+    flex-shrink: 0;
+  }
+}
